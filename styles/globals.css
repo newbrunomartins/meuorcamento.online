@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,4 +8,35 @@ body {
   padding: 0;
   margin: 0;
   height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+:root,
+[data-theme] {
+  background-color: #ffffff; /* fundo branco */
+  color: #777777;            /* texto cinza padrão */
+}
+@layer components {
+  .input-custom {
+    @apply input border border-accent bg-white text-gray-600;
+    display: block;
+    width: 100%;
+  }
+
+  input:-webkit-autofill {
+    background-color: #fff !important;
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    -webkit-text-fill-color: #5A5A5A !important;
+  }
+
+  .label-custom {
+    @apply text-[12px] font-medium mb-1 text-gray-600;
+  }
+
+  .file-custom {
+    @apply file-input border-accent text-gray-600;
+  }
+
+  .btn-primary-custom {
+    @apply btn btn-primary;
+  }
 }
